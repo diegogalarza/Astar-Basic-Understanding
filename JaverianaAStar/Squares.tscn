@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://BlueSquare.png" type="Texture" id=1]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 128.086, -128.232, 127.958, 128.084, -127.933, 128.07, -128.081, -128.121 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -128.081, -128.121, -127.933, 128.07, 127.958, 128.084, 128.086, -128.232 ) ]
+
+[node name="Squares" type="Node2D"]
+
+[node name="SpriteB" type="Sprite" parent="."]
+scale = Vector2( 1.00028, 0.99845 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="SpriteB"]
+scale = Vector2( 0.126392, 0.125699 )
+navpoly = SubResource( 1 )
